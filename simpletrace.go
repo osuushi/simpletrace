@@ -4,9 +4,9 @@ import (
 	"image"
 )
 
-func TraceImage(img image.Image) [][]Point {
+func TraceImage(img image.Image, isColorFilledFunc IsColorFilledFunc) [][]Point {
 	// Make the square map
-	squaremap := getSquaresForImage(img, DarkColorFilledFunc)
+	squaremap := getSquaresForImage(img, isColorFilledFunc)
 	// Get the polygons
 	polygons := squaremap.convertSquaresToPolygons()
 	return polygons

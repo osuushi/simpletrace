@@ -17,7 +17,7 @@ func main() {
 		panic(err)
 	}
 
-	polygons := simpletrace.TraceImage(image)
+	polygons := simpletrace.TraceImage(image, simpletrace.DarkColorFilledFunc)
 	fmt.Println(len(polygons), "polygons found")
 	fmt.Println("Polygon sizes:")
 	for _, polygon := range polygons {
