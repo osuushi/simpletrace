@@ -65,7 +65,6 @@ func (s SquareMap) tracePolygonFromSquare(startingSquare *Square) []Point {
 
 	a, b := lastSquare.CornerPointsInDirection(startPointDirection)
 	segmentStart := Point{(a.X + b.X) / 2, (a.Y + b.Y) / 2}
-	polygon = append(polygon, segmentStart)
 
 	// In order to determine when we need to start a new line segment, we will
 	// track the bounds of the angle that the current line segment is constrained
